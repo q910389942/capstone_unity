@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 {
     static GameManager instance;
     SceneFader fader;
-
+    public GameObject Level2bg;
+    public bool FirstLevel2;
     private void Awake()
     {
         if(instance != null)
@@ -21,7 +22,14 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this);
     }
-
+    private void Update()
+    {
+        if(!FirstLevel2&&Input.GetKeyDown(KeyCode.U))
+        {
+            FirstLevel2 = true;
+            Level2bg.SetActive(true);
+        }
+    }
     public static void RegisterScnenFader(SceneFader obj)
     {
         instance.fader = obj;

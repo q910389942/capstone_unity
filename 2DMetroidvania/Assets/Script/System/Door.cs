@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
     public Transform TPdoor;
 
     private bool isDoor;
-    private Transform playerTransform;
+    public Transform playerTransform;
     // Start is called before the first frame update
     void Start()
     {

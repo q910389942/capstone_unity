@@ -17,17 +17,17 @@ public class DialogSystem : MonoBehaviour
     List<string> textList = new List<string>();
     void Awake()
     {
-        GetTextFromFile(_textFile);
+     //   GetTextFromFile(_textFile);
     }
 
     private void OnEnable()
     {
-        _text.text = textList[index];
-        index++;
+       // _text.text = textList[index];
+       // index++;
     }
 
     void Update()
-    {
+    {/*
         if(Input.GetKeyDown(KeyCode.Space))
         {
             _text.text = textList[index];
@@ -38,7 +38,7 @@ public class DialogSystem : MonoBehaviour
             gameObject.SetActive(false);
             index = 0;
             return;
-        }
+        }*/
     }
 
     void GetTextFromFile(TextAsset file)
